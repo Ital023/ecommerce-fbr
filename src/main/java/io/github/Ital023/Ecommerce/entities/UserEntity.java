@@ -16,7 +16,9 @@ public class UserEntity {
     @Column(name = "full_name")
     private String fullName;
 
-
+    @OneToOne
+    @JoinColumn(name = "billing_address_id")
+    private BillingAddressEntity billingAddress;
 
     public UserEntity() {
     }
